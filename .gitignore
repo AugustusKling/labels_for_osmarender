@@ -1,0 +1,8 @@
+.bzr/
+# Eclipse settings
+.settings
+.classpath
+.project
+# Compiled stuff
+bin/
+*.~1~
