@@ -17,6 +17,13 @@ placement limits the areas where a map render can be used dramatically.</p>
 <p>This project aims to put a postprocessing step after Osmarender to allow for nice labeling whilst still
 being able to use Osmarenders rule files. The additional step only rearranges and possible hides labels in
 dense regions of the map but does not touch the other map features or map styles.</p>
+<h2>Setup</h2>
+<p>Before labels_for_osmarender can be used, you need to make sure that all of the required libraries are in place.
+A description how to set up the project within eclipse follows.</p>
+<p>First, open up Eclipse and import the repositories data into a new general Java project. After doing so you'll find a lot of code problems being reported. This is because external libraries have not been included into the repository.</p>
+<p>A dependency is Apache's Batik. Batik version 1.7 was used during development but other version might work equally well. After adding it, you'll find a lot of compilation problems disappear. Batik is used to read on display Osmarenders SVG files.</p>
+<p>Go on by adding the next dependency – Vivid Solution's Java Topology Suite. JTS version 1.11 was used and its addition should make to remaining compilation problems disappear.</p>
+<p>Verify everything works nicely by selecting runables.Gui and execute it as a Java application. A window appears that allows to select an OSM file and a Osmarender rule file.</p>
 <h2>Usage</h2>
 <p>To generate maps using pure Osmarender one has to invoke the osmarender stylesheet with an XSL processor as
 detailed in the OSM wiki. To generate a map using labels_for_osmarender, execute the labels_for_osmarender.jar
